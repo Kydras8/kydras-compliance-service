@@ -1,0 +1,11 @@
+stages: [compliance]
+compliance:
+  image: mcr.microsoft.com/powershell:latest
+  stage: compliance
+  script:
+    - pwsh ./C:/Scripts/kydras-compliance.ps1 -Command export
+    - mkdir -p governance
+    - cp $HOME/kydras-governance/* governance/
+  artifacts:
+    paths: [governance/]
+    expire_in: 7 days

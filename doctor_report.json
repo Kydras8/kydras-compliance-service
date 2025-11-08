@@ -1,0 +1,5 @@
+[
+  { "plugin":"TerraformLint","status":"PASS","severity":"low","timestamp":"2025-11-08T12:00:00Z","message":"All Terraform files validated","remediation":"" },
+  { "plugin":"KubernetesPolicy","status":"WARN","severity":"medium","timestamp":"2025-11-08T12:00:00Z","message":"Pod security policy missing","remediation":"Add PSP or PodSecurity admission" },
+  { "plugin":"SecretsScan","status":"FAIL","severity":"high","timestamp":"2025-11-08T12:00:00Z","message":"Hardcoded secret found","remediation":"Move secret to vault" }
+]

@@ -1,0 +1,26 @@
+{
+  "name": "Kydras GODMODE Dev Box",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" },
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.11" },
+    "ghcr.io/devcontainers/features/go:1": { "version": "1.22" },
+    "ghcr.io/devcontainers/features/rust:1": { "version": "latest" }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eamodio.gitlens","mhutchie.git-graph","streetsidesoftware.code-spell-checker",
+        "PKief.material-icon-theme","zhuangtongfa.Material-theme","usernamehw.errorlens",
+        "ms-vscode-remote.remote-wsl","ms-vscode-remote.remote-ssh","ms-vscode-remote.remote-containers",
+        "dbaeumer.vscode-eslint","esbenp.prettier-vscode","bradlc.vscode-tailwindcss",
+        "humao.rest-client","rangav.vscode-thunder-client","ms-python.python",
+        "ms-toolsai.jupyter","ms-vscode.cpptools","ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml","hashicorp.terraform","ms-kubernetes-tools.vscode-kubernetes-tools",
+        "GitHub.copilot","GitHub.copilot-chat","Continue.continue"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
