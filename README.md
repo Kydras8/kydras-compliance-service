@@ -1,9 +1,3 @@
-# ⚡ Kydras GODMODE Bootstrapper
-
-Welcome to **Kydras GODMODE** — a one-liner bootstrap that transforms any dev box into a compliance-ready, governance-exporting, VS Code GODMODE environment.
-
----
-
 ## 🛡️ Compliance Status
 
 ![Compliance Score](https://img.shields.io/badge/Compliance%20Score-85%25-blue?style=for-the-badge)
