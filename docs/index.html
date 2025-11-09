@@ -15,15 +15,17 @@
       text-decoration: none;
       border-radius: 5px;
     }
+    .logo { max-width: 120px; margin-bottom: 1rem; }
+    .thumbnail { max-width: 600px; border: 1px solid #ccc; margin-top: 1rem; }
   </style>
 </head>
 <body>
+  <img src="https://kydras.com/assets/logo.png" alt="Kydras Logo" class="logo">
   <h1>🛡️ Kydras Compliance Portal</h1>
-  <a href="index.html">📊 Executive Dashboard</a><br>
-  <a href="audit.md">📋 Audit Table (Markdown)</a><br>
+  <a href="trends.html" class="button">📊 View Audit Dashboard</a><br>
   <a href="audit.pdf" class="button">📄 Download Audit PDF</a><br>
   <a href="../artifacts/kydras_artifacts_latest.zip" class="button">📦 Download Governance Bundle</a><br>
-  <a href="../README.md">🛡️ Compliance README</a><br>
-  <a href="../archive/">📁 Dashboard Archive</a>
+  <img src="https://kydras-compliance-exports.s3.amazonaws.com/graphs/audit_trends_latest.png" alt="Audit Trends Thumbnail" class="thumbnail">
+  <p><em>Latest snapshot from CI/CD pipeline</em></p>
 </body>
 </html>
