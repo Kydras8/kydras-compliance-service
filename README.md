@@ -45,3 +45,7 @@ iwr https://raw.githubusercontent.com/Kydras8/kydras-godmode/main/bootstrap-godm
 ❌ ![fail](https://img.shields.io/badge/FAIL-1-red)
 📊 ![total](https://img.shields.io/badge/Total-16-blue)
 <!-- COMPLIANCE_BADGE_END -->
+
+## 📊 Audit Dashboard Snapshot
+
+![Audit Trends](https://kydras-compliance-exports.s3.amazonaws.com/graphs/audit_trends_latest.png)
