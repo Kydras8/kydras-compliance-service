@@ -1,0 +1,16 @@
+name: Validate Compliance Appendix
+on:
+  push:
+    paths:
+      - docs/appendix.html
+      - docs/compliance_appendix.pdf
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Check Appendix HTML
+        run: test -s docs/appendix.html
+      - name: Check Appendix PDF
+        run: test -s docs/compliance_appendix.pdf
