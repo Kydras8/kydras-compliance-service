@@ -11,3 +11,21 @@ jobs:
         with:
           name: governance-artifacts
           path: ~/kydras-governance/*
+- name: Auto-tag release
+  shell: bash
+  run: |
+    git config user.name \"kydras-ci\"
+    git config user.email \"ci@kydras.com\"
+    TAG=\"v\\"
+    git tag \
+    git push origin \
+    echo \"🔖 Tagged release: \\"
+- name: Auto-tag release
+  shell: bash
+  run: |
+    git config user.name "kydras-ci"
+    git config user.email "ci@kydras.com"
+    TAG="v$(date +'%Y.%m.%d.%H%M')"
+    git tag $TAG
+    git push origin $TAG
+    echo "🔖 Tagged release: $TAG"
