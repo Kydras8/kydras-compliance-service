@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kydras Compliance Appendix</title>
+  <style>
+    body { font-family: Arial; padding: 2rem; background: white; color: #333; }
+    h1 { color: #2c3e50; }
+    .section { margin-bottom: 2rem; }
+    .tagline { color: #caa800; font-weight: bold; margin-bottom: 1rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+    th { background-color: #2980b9; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Kydras Compliance Export Appendix</h1>
+  <div class="tagline">NOTHING IS OFF LIMITS</div>
+  <div class="section">
+    <h2>📅 Export Metadata</h2>
+    <p><strong>Timestamp:</strong> <span id="timestamp"></span></p>
+    <p><strong>Commit:</strong> <span id="commit"></span></p>
+    <p><strong>Bundle:</strong> kydras_artifacts_latest.zip</p>
+  </div>
+  <div class="section">
+    <h2>🧬 Bundle Diff Summary</h2>
+    <table id="diffTable">
+      <thead>
+        <tr><th>Change</th><th>File</th><th>Size</th><th>Hash</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="section">
+    <h2>🔗 Links</h2>
+    <ul>
+      <li><a href="trends.html">Audit Dashboard</a></li>
+      <li><a href="logs.html">Export Log Viewer</a></li>
+      <li><a href="diff.html">Bundle Diff Viewer</a></li>
+      <li><a href="../artifacts/kydras_artifacts_latest.zip">Download Bundle</a></li>
+    </ul>
+  </div>
+  <script>
+    fetch("../logs/export_log.json")
+      .then(res => res.json())
+      .then(log => {
+        const latest = log[log.length - 1];
+        document.getElementById("timestamp").textContent = latest.timestamp;
+        document.getElementById("commit").textContent = latest.commit;
+      });
+    fetch("../logs/bundle_diff.json")
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.querySelector("#diffTable tbody");
+        data.forEach(entry => {
+          const changeType = entry.SideIndicator === "<=" ? "Removed" :
+                             entry.SideIndicator === "=>" ? "Added" : "Modified";
+          const row = document.createElement("tr");
+          row.innerHTML = `<td>${changeType}</td><td>${entry.path}</td><td>${entry.size}</td><td>${entry.hash}</td>`;
+          tbody.appendChild(row);
+        });
+      });
+  </script>
+</body>
+</html>
