@@ -75,3 +75,5 @@ iwr https://raw.githubusercontent.com/Kydras8/kydras-godmode/main/bootstrap-godm
 [![Kydras Dashboard](https://img.shields.io/badge/Kydras--Dashboard-blue?logo=https://kydras.com/assets/logo.svg)](https://kydras8.github.io/kydras-compliance-service/)
 
 [![Export History Status](https://github.com/kydras8/kydras-compliance-service/actions/workflows/history.yml/badge.svg)](https://github.com/kydras8/kydras-compliance-service/actions/workflows/history.yml)
+
+[![Kydras Sync](https://github.com/kydras-systems/kydras-governance/actions/workflows/kydras-sync-matrix.yml/badge.svg)](https://github.com/kydras-systems/kydras-governance/actions/workflows/kydras-sync-matrix.yml)
