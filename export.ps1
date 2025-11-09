@@ -16,3 +16,4 @@ $payload = @{
 } | ConvertTo-Json -Compress
 
 Invoke-RestMethod -Uri "https://hooks.slack.com/services/YOUR/WEBHOOK/URL" -Method Post -Body $payload -ContentType 'application/json'
+$timestamp = Get-Date -Format "yyyy-MM-dd_HHmm"; $commit = git rev-parse --short HEAD; $bucket = "s3://kydras-compliance-exports"; $png = Get-Item "$env:USERPROFILE\kydras-compliance-service\docs\audit_trends.png" -ErrorAction SilentlyContinue; $pdf = Get-Item "$env:USERPROFILE\kydras-compliance-service\docs\audit_trends.pdf" -ErrorAction SilentlyContinue; if ($png) { aws s3 cp $png.FullName "$bucket/graphs/audit_trends_$timestamp.png" --metadata commit=$commit,timestamp=$timestamp }; if ($pdf) { aws s3 cp $pdf.FullName "$bucket/graphs/audit_trends_$timestamp.pdf" --metadata commit=$commit,timestamp=$timestamp }; Write-Host "[Kydras] Synced dashboard exports to S3 → $bucket/graphs/"
