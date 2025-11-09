@@ -5,16 +5,25 @@
   <style>
     body { font-family: Arial; padding: 2rem; background: #f9f9f9; }
     h1 { color: #2c3e50; }
-    a { display: block; margin: 1rem 0; font-size: 1.2rem; color: #2980b9; text-decoration: none; }
+    a.button {
+      display: inline-block;
+      margin: 1rem 0;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      color: white;
+      background-color: #2980b9;
+      text-decoration: none;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
   <h1>🛡️ Kydras Compliance Portal</h1>
-  <a href="index.html">📊 Executive Dashboard</a>
-  <a href="audit.md">📋 Audit Table (Markdown)</a>
-  <a href="audit.pdf">📄 Audit Table (PDF)</a>
-  <a href="../README.md">🛡️ Compliance README</a>
+  <a href="index.html">📊 Executive Dashboard</a><br>
+  <a href="audit.md">📋 Audit Table (Markdown)</a><br>
+  <a href="audit.pdf" class="button">📄 Download Audit PDF</a><br>
+  <a href="../artifacts/kydras_artifacts_latest.zip" class="button">📦 Download Governance Bundle</a><br>
+  <a href="../README.md">🛡️ Compliance README</a><br>
   <a href="../archive/">📁 Dashboard Archive</a>
-  <a href="../artifacts/">📦 Governance Bundles</a>
 </body>
 </html>
