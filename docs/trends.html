@@ -41,3 +41,4 @@
 <button onclick="exportPNG()">🖼️ Export as PNG</button><button onclick="exportPDF()">📄 Export as PDF</button><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><script>function exportPNG(){html2canvas(document.getElementById("trendChart")).then(canvas=>{const link=document.createElement("a");link.download="audit_trends.png";link.href=canvas.toDataURL();link.click();});}function exportPDF(){html2canvas(document.getElementById("trendChart")).then(canvas=>{const imgData=canvas.toDataURL("image/png");const pdf=new jspdf.jsPDF();pdf.addImage(imgData,"PNG",10,10,180,100);pdf.save("audit_trends.pdf");});}</script></body>
 </html>
 
+
