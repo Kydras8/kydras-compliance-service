@@ -67,3 +67,5 @@ iwr https://raw.githubusercontent.com/Kydras8/kydras-godmode/main/bootstrap-godm
 
 🔗 [View Audit Log](docs/logs.html)
 📦 [Download Latest Bundle](artifacts/kydras_artifacts_latest.zip)
+
+📦 [Download Latest Bundle (Signed)]()
