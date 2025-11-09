@@ -69,3 +69,5 @@ iwr https://raw.githubusercontent.com/Kydras8/kydras-godmode/main/bootstrap-godm
 📦 [Download Latest Bundle](artifacts/kydras_artifacts_latest.zip)
 
 📦 [Download Latest Bundle (Signed)]()
+
+[![Compliance Dashboard](https://img.shields.io/badge/Kydras-Dashboard-blue)](https://Kydras8.github.io/kydras-compliance-service/)
