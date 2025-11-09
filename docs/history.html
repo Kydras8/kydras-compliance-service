@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kydras Export History</title>
+  <style>
+    body { font-family: Arial; padding: 2rem; background: #f9f9f9; }
+    h1 { color: #2c3e50; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+    th { background-color: #2980b9; color: white; }
+    .tagline { color: #caa800; font-weight: bold; margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+  <h1>📜 Kydras Export History</h1>
+  <div class="tagline">NOTHING IS OFF LIMITS</div>
+  <table id="historyTable">
+    <thead>
+      <tr><th>Timestamp</th><th>Commit</th><th>Bundle</th><th>Appendix</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script>
+    fetch("../logs/export_log.json")
+      .then(res => res.json())
+      .then(log => {
+        const tbody = document.querySelector("#historyTable tbody");
+        log.forEach(entry => {
+          const bundleName = entry.bundle || "kydras_artifacts_latest.zip";
+          const row = document.createElement("tr");
+          row.innerHTML = `<td>${entry.timestamp}</td><td>${entry.commit}</td><td><a href="../artifacts/${bundleName}">Download</a></td><td><a href="appendix.html">View</a></td>`;
+          tbody.appendChild(row);
+        });
+      });
+  </script>
+</body>
+</html>
