@@ -53,3 +53,17 @@ iwr https://raw.githubusercontent.com/Kydras8/kydras-godmode/main/bootstrap-godm
 ## 📊 Audit Dashboard Snapshot
 
 ![Audit Trends](https://kydras-compliance-exports.s3.amazonaws.com/graphs/audit_trends_latest.png)
+
+## 🚦 Compliance Export Status
+
+![Export Status](https://github.com/Kydras8/kydras-compliance-service/actions/workflows/kydras-ci.yml/badge.svg)
+
+🔗 [View Audit Log](docs/logs.html)
+📦 [Download Latest Bundle](artifacts/kydras_artifacts_latest.zip)
+
+## 🚦 Compliance Export Status
+
+![Export Status](https://github.com/Kydras8/kydras-compliance-service/actions/workflows/kydras-ci.yml/badge.svg)
+
+🔗 [View Audit Log](docs/logs.html)
+📦 [Download Latest Bundle](artifacts/kydras_artifacts_latest.zip)
