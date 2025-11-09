@@ -77,3 +77,6 @@ iwr https://raw.githubusercontent.com/Kydras8/kydras-godmode/main/bootstrap-godm
 [![Export History Status](https://github.com/kydras8/kydras-compliance-service/actions/workflows/history.yml/badge.svg)](https://github.com/kydras8/kydras-compliance-service/actions/workflows/history.yml)
 
 [![Kydras Sync](https://github.com/kydras-systems/kydras-governance/actions/workflows/kydras-sync-matrix.yml/badge.svg)](https://github.com/kydras-systems/kydras-governance/actions/workflows/kydras-sync-matrix.yml)
+
+📜 [Kydras Prime Directive](KYDRAS_PRIME_DIRECTIVE.md)
+
