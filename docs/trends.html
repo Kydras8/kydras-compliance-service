@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kydras Audit Trends</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial; padding: 2rem; background: #f9f9f9; }
+    canvas { max-width: 800px; margin: 2rem auto; display: block; }
+  </style>
+</head>
+<body>
+  <h1>📊 Audit Trends Over Time</h1>
+  <canvas id="trendChart"></canvas>
+  <script>
+    const ctx = document.getElementById('trendChart').getContext('2d');
+    const trendChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["Nov 1", "Nov 2", "Nov 3", "Nov 4"],
+        datasets: [
+          { label: "PASS", data: [12, 13, 14, 12], borderColor: "green", fill: false },
+          { label: "WARN", data: [2, 3, 1, 3], borderColor: "orange", fill: false },
+          { label: "FAIL", data: [1, 0, 2, 1], borderColor: "red", fill: false }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: 'top' } },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+  </script>
+</body>
+</html>
