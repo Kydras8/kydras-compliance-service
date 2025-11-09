@@ -60,5 +60,6 @@
         });
       });
   </script>
-</body>
+<button onclick="exportPDF()" style="margin-bottom: 1rem; padding: 0.5rem 1rem; background-color: #2980b9; color: white; border: none; border-radius: 5px;">📄 Export PDF</button><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><script>async function exportPDF() { const { jsPDF } = window.jspdf; const pdf = new jsPDF(); const element = document.body; await html2canvas(element).then(canvas => { const imgData = canvas.toDataURL("image/png"); pdf.addImage(imgData, "PNG", 10, 10, 190, 270); pdf.save("compliance_appendix.pdf"); }); }</script></body>
 </html>
+
