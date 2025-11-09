@@ -31,3 +31,17 @@ iwr https://raw.githubusercontent.com/Kydras8/kydras-godmode/main/bootstrap-godm
 
 
 
+<!-- COMPLIANCE_BADGE_START -->
+🛡️ **Compliance Score:** ![score](https://img.shields.io/badge/Score-95%25-green)
+✅ ![pass](https://img.shields.io/badge/PASS-12-brightgreen)
+⚠️ ![warn](https://img.shields.io/badge/WARN-3-yellow)
+❌ ![fail](https://img.shields.io/badge/FAIL-1-red)
+📊 ![total](https://img.shields.io/badge/Total-16-blue)
+<!-- COMPLIANCE_BADGE_END -->
+<!-- COMPLIANCE_BADGE_START -->
+🛡️ **Compliance Score:** ![score](https://img.shields.io/badge/Score-95%25-green)
+✅ ![pass](https://img.shields.io/badge/PASS-12-brightgreen)
+⚠️ ![warn](https://img.shields.io/badge/WARN-3-yellow)
+❌ ![fail](https://img.shields.io/badge/FAIL-1-red)
+📊 ![total](https://img.shields.io/badge/Total-16-blue)
+<!-- COMPLIANCE_BADGE_END -->

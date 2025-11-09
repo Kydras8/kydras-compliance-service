@@ -12,23 +12,31 @@
   <h1>📊 Audit Trends Over Time</h1>
   <canvas id="trendChart"></canvas>
   <script>
-    const ctx = document.getElementById('trendChart').getContext('2d');
-    const trendChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ["Nov 1", "Nov 2", "Nov 3", "Nov 4"],
-        datasets: [
-          { label: "PASS", data: [12, 13, 14, 12], borderColor: "green", fill: false },
-          { label: "WARN", data: [2, 3, 1, 3], borderColor: "orange", fill: false },
-          { label: "FAIL", data: [1, 0, 2, 1], borderColor: "red", fill: false }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: { legend: { position: 'top' } },
-        scales: { y: { beginAtZero: true } }
-      }
-    });
+    fetch("trend_data.json")
+      .then(response => response.json())
+      .then(data => {
+        const labels = data.map(d => d.date);
+        const passData = data.map(d => d.pass);
+        const warnData = data.map(d => d.warn);
+        const failData = data.map(d => d.fail);
+
+        new Chart(document.getElementById('trendChart').getContext('2d'), {
+          type: 'line',
+          data: {
+            labels: labels,
+            datasets: [
+              { label: "PASS", data: passData, borderColor: "green", fill: false },
+              { label: "WARN", data: warnData, borderColor: "orange", fill: false },
+              { label: "FAIL", data: failData, borderColor: "red", fill: false }
+            ]
+          },
+          options: {
+            responsive: true,
+            plugins: { legend: { position: 'top' } },
+            scales: { y: { beginAtZero: true } }
+          }
+        });
+      });
   </script>
 </body>
 </html>
