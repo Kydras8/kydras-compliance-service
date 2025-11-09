@@ -49,3 +49,7 @@ iwr https://raw.githubusercontent.com/Kydras8/kydras-godmode/main/bootstrap-godm
 ## 📊 Audit Dashboard Snapshot
 
 ![Audit Trends](https://kydras-compliance-exports.s3.amazonaws.com/graphs/audit_trends_latest.png)
+
+## 📊 Audit Dashboard Snapshot
+
+![Audit Trends](https://kydras-compliance-exports.s3.amazonaws.com/graphs/audit_trends_latest.png)
