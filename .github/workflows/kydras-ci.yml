@@ -29,3 +29,8 @@ jobs:
     git tag $TAG
     git push origin $TAG
     echo "🔖 Tagged release: $TAG"
+- name: Export compliance artifacts
+  shell: pwsh
+  run: |
+    $ErrorActionPreference = "Stop"
+    & "$env:USERPROFILE\kydras-compliance-service\export.ps1"
