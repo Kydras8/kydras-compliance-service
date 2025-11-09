@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kydras Bundle Diff</title>
+  <style>
+    body { font-family: Arial; padding: 2rem; background: #f9f9f9; }
+    h1 { color: #2c3e50; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+    th { background-color: #2980b9; color: white; }
+    .added { background-color: #d4edda; }
+    .removed { background-color: #f8d7da; }
+    .modified { background-color: #fff3cd; }
+  </style>
+</head>
+<body>
+  <h1>🧬 Kydras Bundle Diff Viewer</h1>
+  <table id="diffTable">
+    <thead>
+      <tr><th>Change</th><th>File</th><th>Size</th><th>Hash</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script>
+    fetch("../logs/bundle_diff.json")
+      .then(response => response.json())
+      .then(data => {
+        const tbody = document.querySelector("#diffTable tbody");
+        data.forEach(entry => {
+          const row = document.createElement("tr");
+          const changeType = entry.SideIndicator === "<=" ? "Removed" :
+                             entry.SideIndicator === "=>" ? "Added" : "Modified";
+          row.className = changeType.toLowerCase();
+          row.innerHTML = `<td>${changeType}</td><td>${entry.path}</td><td>${entry.size}</td><td>${entry.hash}</td>`;
+          tbody.appendChild(row);
+        });
+      });
+  </script>
+</body>
+</html>
