@@ -1,3 +1,4 @@
+HEAD
 🛡️ Kydras Compliance Monitor Service
 
 ![Compliance Score](https://img.shields.io/badge/Compliance%20Score-85%25-blue?style=for-the-badge)
@@ -23,3 +24,8 @@ Run this one-liner in PowerShell 7+:
 
 ```powershell
 iwr https://raw.githubusercontent.com/Kydras8/kydras-godmode/main/bootstrap-godmode.ps1 | iex
+
+# Kydras Compliance Monitor Service
+
+([Kydras] Update README badge block)
+
