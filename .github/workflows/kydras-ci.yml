@@ -34,3 +34,8 @@ jobs:
   run: |
     $ErrorActionPreference = "Stop"
     & "$env:USERPROFILE\kydras-compliance-service\export.ps1"
+- name: Run Compliance Export Chain
+  shell: pwsh
+  run: |
+    $ErrorActionPreference = "Stop"
+    & "$env:USERPROFILE\kydras-compliance-service\export.ps1"
