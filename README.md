@@ -1,3 +1,11 @@
+<!-- Kydras Repo Header -->
+<p align="center">
+  <strong>Kydras Systems Inc.</strong><br/>
+  <em>Nothing is off limits.</em>
+</p>
+
+---
+
 HEAD
 🛡️ Kydras Compliance Monitor Service
 
@@ -79,4 +87,5 @@ iwr https://raw.githubusercontent.com/Kydras8/kydras-godmode/main/bootstrap-godm
 [![Kydras Sync](https://github.com/kydras-systems/kydras-governance/actions/workflows/kydras-sync-matrix.yml/badge.svg)](https://github.com/kydras-systems/kydras-governance/actions/workflows/kydras-sync-matrix.yml)
 
 📜 [Kydras Prime Directive](KYDRAS_PRIME_DIRECTIVE.md)
+
 
